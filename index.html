@@ -168,8 +168,8 @@ a.btn:hover,a.btn:focus-visible{background:rgba(123,27,32,.08);outline:none}
 #ppill{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);z-index:57;padding:12px 22px;border-radius:999px;background:rgba(40,4,10,.78);color:#f3d79a;
   font:600 15px/1 var(--serif);letter-spacing:.18em;text-transform:uppercase;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;white-space:nowrap}
 #ppill.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
-#replay{position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:58;border:1px solid #c9a24a;background:#690a13;color:#fff3d6;
-  font:600 15px/1 var(--serif);letter-spacing:.2em;text-transform:uppercase;padding:13px 26px;border-radius:999px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .6s}
+#replay{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:calc(max(14px,env(safe-area-inset-bottom)) + 56px);z-index:58;border:1px solid #c9a24a;background:#4a0710;color:#f3d79a;
+  font:600 13px/1 var(--serif);letter-spacing:.16em;text-transform:uppercase;padding:11px 16px;box-shadow:0 4px 14px rgba(0,0,0,.3);border-radius:999px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .6s}
 #replay.show{opacity:1;pointer-events:auto}
 #nav{position:fixed;right:max(8px,calc((100vw - var(--colW))/2 - 26px));top:50%;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:11px;opacity:0;transition:opacity .8s}
 #nav.show{opacity:1}
@@ -211,7 +211,7 @@ a.btn:hover,a.btn:focus-visible{background:rgba(123,27,32,.08);outline:none}
 <nav id="nav"></nav>
 <div id="prog" aria-hidden="true"></div>
 <div id="ppill" aria-live="polite"></div>
-<button id="replay" type="button">↺ Replay</button>
+<button id="replay" type="button"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="vertical-align:-2px;margin-right:6px"><path d="M4 12a8 8 0 1 0 2.5-5.8"/><path d="M4 4v4.5h4.5"/></svg>Replay</button>
 <audio id="song" src="song.mp3" loop preload="auto"></audio>
 
 <script>
