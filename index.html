@@ -406,7 +406,7 @@ const A=META.anim;
    [614,770,'uc','font-size:3.9cqw;font-weight:500;color:#6e1a22','union on'],
    [655,826,'orn','color:#8a2a2e','<i style="background:linear-gradient(90deg,transparent,#8a2a2e)"></i>❁<i style="background:linear-gradient(90deg,#8a2a2e,transparent)"></i>']
   ],'');
-  s.cue=add(s,`<div class="cue">Tap to pause</div>`);
+  s.cue={style:{}};
   s.enter=first=>{ if(first){ S.chime(); } };
 }
 /* 2 · calendar */
@@ -723,7 +723,7 @@ document.addEventListener('visibilitychange',()=>{ if(document.hidden) song.paus
 
 /* =================== AUTO-PLAY: each card holds, then the next one rises in =================== */
 const AUTO=(()=>{
-  const DUR={us:6,date:6,family:8,haldi:6,mehendi:6,wedding:8,venues:0};   // seconds per card (0 = last card, stop)
+  const DUR={us:3.5,date:6,family:8,haldi:6,mehendi:6,wedding:8,venues:0};   // seconds per card (0 = last card, stop)
   const prog=$('#prog'), pill=$('#ppill'), rp=$('#replay');
   prog.innerHTML=SECTIONS.map(()=>'<i><b></b></i>').join('');
   const bars=[...prog.querySelectorAll('b')];
