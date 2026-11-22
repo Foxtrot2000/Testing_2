@@ -372,7 +372,7 @@ const stage=$('#stage'), nav=$('#nav');
 SECTIONS.forEach((s,i)=>{
   const X=EXT[s.id];
   const sc=document.createElement('div'); sc.className='scene'; sc.style.zIndex=i+1;
-  sc.innerHTML=`<div class="inner"><img class="ext" src="ext_${s.id}_${SET}.webp" alt=""><section class="sec" id="${s.id}" aria-label="${s.label}"><div class="panel"></div></section></div><div class="shade"></div>`;
+  sc.innerHTML=`<div class="inner"><img class="ext" src="ext_${s.id}_${SET}.webp?v=1122b" alt=""><section class="sec" id="${s.id}" aria-label="${s.label}"><div class="panel"></div></section></div><div class="shade"></div>`;
   sc.insertAdjacentHTML('beforeend','<div class="cap"><canvas></canvas></div>');
   stage.appendChild(sc); s.scene=sc; s.inner=sc.querySelector('.inner'); s.ext=sc.querySelector('.ext'); s.el=sc.querySelector('.sec'); s.panel=s.el.firstChild; s.shade=sc.querySelector('.shade'); s.birds=[]; s.X=X;
   const b=document.createElement('button'); b.setAttribute('aria-label',s.label); b.innerHTML=`<span>${s.label}</span>`;
